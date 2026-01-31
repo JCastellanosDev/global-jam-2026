@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://cagcw41k7kwjk"]
+
+[ext_resource type="Shader" uid="uid://2k8krivc20ly" path="res://Interface_menu/menu_principal.gdshader" id="1_6b3bk"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c8tgd"]
+shader = ExtResource("1_6b3bk")
+shader_parameter/rain_color = Color(0, 1, 0, 1)
+shader_parameter/easter_egg_color = Color(1, 0, 1, 1)
+shader_parameter/speed = 1.0
+shader_parameter/density = 80.0
+shader_parameter/column_width = 0.5
+shader_parameter/easter_egg_chance = 0.05
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vmnhk"]
+bg_color = Color(0.18431373, 0.19215687, 0.21176471, 1)
+draw_center = false
+skew = Vector2(80, 80)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="Menu_Principal" type="Control" unique_id=301738527]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Fondo_Matrix" type="ColorRect" parent="." unique_id=1824478088]
+material = SubResource("ShaderMaterial_c8tgd")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=532522170]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Personajes" type="PanelContainer" parent="HBoxContainer" unique_id=547195778]
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vmnhk")
