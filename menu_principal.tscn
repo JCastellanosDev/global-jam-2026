@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://cagcw41k7kwjk"]
 
-[ext_resource type="Shader" uid="uid://2k8krivc20ly" path="res://Interface_menu/menu_principal.gdshader" id="1_6b3bk"]
-[ext_resource type="FontFile" uid="uid://dmlj5cm1ps6tw" path="res://Interface_menu/fonts/PixelOperator.ttf" id="2_8vuq5"]
-[ext_resource type="Texture2D" uid="uid://dapsxlj1c61df" path="res://Interface_menu/6da0552e-9661-426e-8cbc-671257d3a874.png" id="3_hy80p"]
-[ext_resource type="Texture2D" uid="uid://dc1yrckhp3t78" path="res://Interface_menu/avatar/Gemini_Generated_Image_s16nnws16nnws16n.png" id="4_r184l"]
+[ext_resource type="Shader" uid="uid://2k8krivc20ly" path="res://Interface_menu/menu_principal.gdshader" id="1_ns3he"]
+[ext_resource type="FontFile" uid="uid://dmlj5cm1ps6tw" path="res://Interface_menu/fonts/PixelOperator.ttf" id="2_fa1tu"]
+[ext_resource type="Texture2D" uid="uid://dapsxlj1c61df" path="res://Interface_menu/6da0552e-9661-426e-8cbc-671257d3a874.png" id="3_a6518"]
+[ext_resource type="Texture2D" uid="uid://dc1yrckhp3t78" path="res://Interface_menu/avatar/Gemini_Generated_Image_s16nnws16nnws16n.png" id="4_yxm4i"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_c8tgd"]
-shader = ExtResource("1_6b3bk")
+shader = ExtResource("1_ns3he")
 shader_parameter/rain_color = Color(0, 1, 0, 1)
 shader_parameter/easter_egg_color = Color(1, 0, 1, 1)
 shader_parameter/speed = 1.0
@@ -74,7 +74,7 @@ layout_mode = 2
 
 [node name="Voice Channels" type="Label" parent="Fondo_Matrix/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=887504524]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_8vuq5")
+theme_override_fonts/font = ExtResource("2_fa1tu")
 theme_override_font_sizes/font_size = 26
 text = "VOICE CHANNEL"
 
@@ -91,7 +91,7 @@ offset_top = -4.0
 offset_right = 1418.0
 offset_bottom = 1020.0
 scale = Vector2(0.04, 0.04)
-texture = ExtResource("3_hy80p")
+texture = ExtResource("3_a6518")
 stretch_mode = 5
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="Fondo_Matrix/Panel/MarginContainer/VBoxContainer" unique_id=1892570329]
@@ -99,7 +99,7 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="Fondo_Matrix/Panel/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=2120907120]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_8vuq5")
+theme_override_fonts/font = ExtResource("2_fa1tu")
 theme_override_font_sizes/font_size = 20
 text = "Proyect Dead1ne dev tem"
 
@@ -122,16 +122,19 @@ offset_left = 10.0
 offset_top = 10.0
 offset_right = 110.0
 offset_bottom = 110.0
-texture = ExtResource("4_r184l")
+texture = ExtResource("4_yxm4i")
 expand_mode = 1
 stretch_mode = 5
 
 [node name="Label" type="Label" parent="Fondo_Matrix/Panel/MarginContainer/VBoxContainer/GridContainer/avatar1" unique_id=1646519970]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_8vuq5")
+theme_override_fonts/font = ExtResource("2_fa1tu")
 theme_override_font_sizes/font_size = 17
 text = "Jesus Castellanos"
 
 [node name="Label2" type="Label" parent="Fondo_Matrix/Panel/MarginContainer/VBoxContainer/GridContainer/avatar1" unique_id=1070324029]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.53333336, 0.53333336, 0.53333336, 1)
+theme_override_fonts/font = ExtResource("2_fa1tu")
+theme_override_font_sizes/font_size = 16
 text = "Music"
