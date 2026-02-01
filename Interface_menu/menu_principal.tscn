@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://cagcw41k7kwjk"]
 
 [ext_resource type="Shader" uid="uid://2k8krivc20ly" path="res://Interface_menu/menu_principal.gdshader" id="1_6b3bk"]
+[ext_resource type="FontFile" uid="uid://dmlj5cm1ps6tw" path="res://Interface_menu/fonts/PixelOperator.ttf" id="2_8vuq5"]
+[ext_resource type="Texture2D" uid="uid://dapsxlj1c61df" path="res://Interface_menu/6da0552e-9661-426e-8cbc-671257d3a874.png" id="3_hy80p"]
+[ext_resource type="Texture2D" uid="uid://dc1yrckhp3t78" path="res://Interface_menu/avatar/Gemini_Generated_Image_s16nnws16nnws16n.png" id="4_r184l"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_c8tgd"]
 shader = ExtResource("1_6b3bk")
@@ -11,15 +14,16 @@ shader_parameter/density = 80.0
 shader_parameter/column_width = 0.5
 shader_parameter/easter_egg_chance = 0.05
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vmnhk"]
-bg_color = Color(0.18431373, 0.19215687, 0.21176471, 1)
-draw_center = false
-skew = Vector2(80, 80)
-border_blend = true
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wjp8b"]
+bg_color = Color(0.16470589, 0.1882353, 0.28627452, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.3529412, 0.47843137, 0.62352943, 1)
+shadow_color = Color(0, 0, 0, 1)
+shadow_size = 20
+shadow_offset = Vector2(0, 4)
 
 [node name="Menu_Principal" type="Control" unique_id=301738527]
 layout_mode = 3
@@ -38,15 +42,96 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=532522170]
+[node name="Panel" type="Panel" parent="Fondo_Matrix" unique_id=816180092]
+modulate = Color(1, 1, 1, 0.7176471)
+custom_minimum_size = Vector2(600, 550)
+layout_mode = 1
+anchors_preset = -1
+offset_left = 106.0
+offset_top = 54.0
+offset_right = 706.0
+offset_bottom = 604.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_wjp8b")
+
+[node name="MarginContainer" type="MarginContainer" parent="Fondo_Matrix/Panel" unique_id=142534586]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
 
-[node name="Personajes" type="PanelContainer" parent="HBoxContainer" unique_id=547195778]
-custom_minimum_size = Vector2(400, 200)
+[node name="VBoxContainer" type="VBoxContainer" parent="Fondo_Matrix/Panel/MarginContainer" unique_id=444903913]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_vmnhk")
+theme_override_constants/separation = 15
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Fondo_Matrix/Panel/MarginContainer/VBoxContainer" unique_id=546873754]
+layout_mode = 2
+
+[node name="Voice Channels" type="Label" parent="Fondo_Matrix/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=887504524]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_8vuq5")
+theme_override_font_sizes/font_size = 26
+text = "VOICE CHANNEL"
+
+[node name="Control" type="Control" parent="Fondo_Matrix/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=469063670]
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="Fondo_Matrix/Panel/MarginContainer/VBoxContainer/HBoxContainer/Control" unique_id=1610637283]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 0
+offset_left = 394.0
+offset_top = -4.0
+offset_right = 1418.0
+offset_bottom = 1020.0
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("3_hy80p")
+stretch_mode = 5
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Fondo_Matrix/Panel/MarginContainer/VBoxContainer" unique_id=1892570329]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Fondo_Matrix/Panel/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=2120907120]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_8vuq5")
+theme_override_font_sizes/font_size = 20
+text = "Proyect Dead1ne dev tem"
+
+[node name="GridContainer" type="GridContainer" parent="Fondo_Matrix/Panel/MarginContainer/VBoxContainer" unique_id=156837321]
+layout_mode = 2
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 3
+
+[node name="avatar1" type="VBoxContainer" parent="Fondo_Matrix/Panel/MarginContainer/VBoxContainer/GridContainer" unique_id=1668023863]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="Fondo_Matrix/Panel/MarginContainer/VBoxContainer/GridContainer/avatar1" unique_id=1101462644]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Fondo_Matrix/Panel/MarginContainer/VBoxContainer/GridContainer/avatar1/Control" unique_id=2034005942]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 110.0
+offset_bottom = 110.0
+texture = ExtResource("4_r184l")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Fondo_Matrix/Panel/MarginContainer/VBoxContainer/GridContainer/avatar1" unique_id=1646519970]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_8vuq5")
+theme_override_font_sizes/font_size = 17
+text = "Jesus Castellanos"
+
+[node name="Label2" type="Label" parent="Fondo_Matrix/Panel/MarginContainer/VBoxContainer/GridContainer/avatar1" unique_id=1070324029]
+layout_mode = 2
+text = "Music"
